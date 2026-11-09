@@ -6,10 +6,9 @@ export default function Home() {
   const [cvText, setCvText] = useState('Télécharger CV');
   const [emailText, setEmailText] = useState('mouhamadafrid.azar@gmail.com');
 
- const handleDownloadCv = () => {
-    
+const handleDownloadCv = () => {
     const link = document.createElement('a');
-    link.href = 'cv.pdf';
+    link.href = '/cv.pdf';
     link.download = 'CV_Mouhamad_Azar_Alternance_IA.pdf';
     document.body.appendChild(link);
     link.click();
