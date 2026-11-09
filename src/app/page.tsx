@@ -76,7 +76,7 @@ const handleDownloadCv = () => {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-tertiary"></span>
                 </span>
-                <span className="font-label-sm text-label-sm text-tertiary tracking-wide">Rythme : 1 Semaine École / 3 Semaines Entreprise</span>
+                <span className="font-label-sm text-label-sm text-tertiary tracking-wide">Rythme : 2 Semaine École / 2 Semaines Entreprise</span>
               </div>
               
               <h1 className="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight">
