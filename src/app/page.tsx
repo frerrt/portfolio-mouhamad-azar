@@ -5,15 +5,11 @@ import { useState } from 'react';
 export default function Home() {
   const [cvText, setCvText] = useState('Télécharger CV');
   const [emailText, setEmailText] = useState('mouhamadafrid.azar@gmail.com');
+const handleDownloadCv = () => {
+    // 1. Ouvre le CV dans un nouvel onglet de manière sécurisée
+    window.open('/cv.pdf', '_blank', 'noopener,noreferrer');
 
-  const handleDownloadCv = () => {
-    const link = document.createElement('a');
-    link.href = '/cv.pdf';
-    link.download = 'CV_Mouhamad_Azar_Alternance_IA.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-
+    // 2. Animation du texte du bouton
     setCvText('Téléchargé !');
     setTimeout(() => setCvText('Télécharger CV'), 2000);
   };
