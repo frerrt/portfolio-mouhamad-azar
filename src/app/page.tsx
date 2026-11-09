@@ -6,16 +6,29 @@ export default function Home() {
   const [cvText, setCvText] = useState('Télécharger CV');
   const [emailText, setEmailText] = useState('mouhamadafrid.azar@gmail.com');
 
-  const handleDownloadCv = () => {
+ const handleDownloadCv = () => {
+    
+    const link = document.createElement('a');
+    link.href = 'cv.pdf';
+    link.download = 'CV_Mouhamad_Azar_Alternance_IA.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    // Animation du bouton
     setCvText('Téléchargé !');
     setTimeout(() => setCvText('Télécharger CV'), 2000);
   };
 
-  const handleCopyEmail = () => {
+  const handleCopyEmail = async () => {
     const email = 'mouhamadafrid.azar@gmail.com';
-    navigator.clipboard?.writeText(email);
-    setEmailText('Email copié !');
-    setTimeout(() => setEmailText(email), 2000);
+    try {
+      await navigator.clipboard.writeText(email);
+      setEmailText('Email copié !');
+      setTimeout(() => setEmailText(email), 2000);
+    } catch (err) {
+      console.error('Erreur lors de la copie :', err);
+    }
   };
 
   return (
@@ -92,10 +105,6 @@ export default function Home() {
                   <span className="material-symbols-outlined text-[16px] text-primary">location_on</span>
                   <span>Meaux (77100) — Mobilité Île-de-France</span>
                 </div>
-                <a href="https://afrid.neocities.org" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-low text-on-surface-variant hover:text-on-surface text-label-sm font-label-sm transition-colors shadow-sm flex-shrink-0">
-                  <span className="material-symbols-outlined text-[16px] text-secondary">language</span>
-                  <span>afrid.neocities.org</span>
-                </a>
                 <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-low text-on-surface-variant text-label-sm font-label-sm shadow-sm flex-shrink-0">
                   <span className="material-symbols-outlined text-[16px] text-tertiary">translate</span>
                   <span>Anglais C1</span>
@@ -328,7 +337,7 @@ export default function Home() {
                   À la recherche d'un alternant Développeur / IA ?<br/>Collaborons dès septembre 2026.
                 </h3>
                 <p className="font-body-sm text-body-sm text-on-surface-variant">
-                  Rythme : 1 semaine école / 3 semaines entreprise • Mobilité : Île-de-France.
+                  Rythme : 2 semaine école / 2 semaines entreprise • Mobilité : Île-de-France.
                 </p>
                 <div className="pt-space-xs flex flex-col sm:flex-row gap-space-sm">
                   <a href="mailto:mouhamadafrid.azar@gmail.com" className="inline-flex items-center justify-center gap-2 py-3 px-5 rounded-xl bg-gradient-to-r from-primary-container to-secondary-container text-on-primary font-headline-sm text-[15px] shadow-[0_4px_24px_rgba(77,142,255,0.4)] active:scale-[0.98] transition-transform">
