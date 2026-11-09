@@ -350,7 +350,7 @@ const handleDownloadCv = () => {
                     <a href="https://github.com/frerrt" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors font-medium">
                       🔗 GitHub (frerrt)
                     </a>
-                    <a href="https://www.linkedin.com/in/votre-profil" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors font-medium">
+                    <a href="https://www.linkedin.com/in/mouhamad-azar-3b8493207/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors font-medium">
                       💼 LinkedIn
                     </a>
                   </div>
