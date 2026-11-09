@@ -6,7 +6,7 @@ export default function Home() {
   const [cvText, setCvText] = useState('Télécharger CV');
   const [emailText, setEmailText] = useState('mouhamadafrid.azar@gmail.com');
 
-const handleDownloadCv = () => {
+  const handleDownloadCv = () => {
     const link = document.createElement('a');
     link.href = '/cv.pdf';
     link.download = 'CV_Mouhamad_Azar_Alternance_IA.pdf';
@@ -14,7 +14,6 @@ const handleDownloadCv = () => {
     link.click();
     document.body.removeChild(link);
 
-    // Animation du bouton
     setCvText('Téléchargé !');
     setTimeout(() => setCvText('Télécharger CV'), 2000);
   };
@@ -76,7 +75,7 @@ const handleDownloadCv = () => {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-tertiary"></span>
                 </span>
-                <span className="font-label-sm text-label-sm text-tertiary tracking-wide">Rythme : 2 Semaine École / 2 Semaines Entreprise</span>
+                <span className="font-label-sm text-label-sm text-tertiary tracking-wide">Rythme : 2 Semaines École / 2 Semaines Entreprise</span>
               </div>
               
               <h1 className="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight">
@@ -336,7 +335,7 @@ const handleDownloadCv = () => {
                   À la recherche d'un alternant Développeur / IA ?<br/>Collaborons dès septembre 2026.
                 </h3>
                 <p className="font-body-sm text-body-sm text-on-surface-variant">
-                  Rythme : 2 semaine école / 2 semaines entreprise • Mobilité : Île-de-France.
+                  Rythme : 2 semaines école / 2 semaines entreprise • Mobilité : Île-de-France.
                 </p>
                 <div className="pt-space-xs flex flex-col sm:flex-row gap-space-sm">
                   <a href="mailto:mouhamadafrid.azar@gmail.com" className="inline-flex items-center justify-center gap-2 py-3 px-5 rounded-xl bg-gradient-to-r from-primary-container to-secondary-container text-on-primary font-headline-sm text-[15px] shadow-[0_4px_24px_rgba(77,142,255,0.4)] active:scale-[0.98] transition-transform">
@@ -348,9 +347,17 @@ const handleDownloadCv = () => {
                     <span>{emailText}</span>
                   </button>
                 </div>
-                <div className="pt-2 flex items-center gap-4 text-xs text-on-surface-variant">
+                <div className="pt-2 flex flex-col gap-1 text-xs text-on-surface-variant">
                   <span>📞 07 68 77 17 26</span>
                   <span>📍 Meaux (77100)</span>
+                  <div className="flex items-center gap-3 pt-1">
+                    <a href="https://github.com/frerrt" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors font-medium">
+                      🔗 GitHub (frerrt)
+                    </a>
+                    <a href="https://www.linkedin.com/in/votre-profil" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors font-medium">
+                      💼 LinkedIn
+                    </a>
+                  </div>
                 </div>
               </div>
             </section>
