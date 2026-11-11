@@ -4,17 +4,21 @@
 
 @layer base {
   html, body {
-    width: 100vw;
+    width: 100%;
+    min-height: 100vh;
     margin: 0;
     padding: 0;
     background-color: #0f131c;
     color: #dfe2ee;
     overflow-x: hidden;
+    overflow-y: auto; /* Force un défilement vertical sain */
   }
+  
   body {
-    /*overscroll-behavior-y: none;*/
     font-family: 'Plus Jakarta Sans', sans-serif;
+    -webkit-overflow-scrolling: touch; /* Fluidifie le scroll tactile sur mobile/tablette */
   }
+
   .pb-safe {
     padding-bottom: env(safe-area-inset-bottom, 0px);
   }
@@ -23,6 +27,14 @@
   }
 }
 
+/* Barre de défilement personnalisée et propre (compatible tactile) */
 ::-webkit-scrollbar {
-  display: none;
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0f131c;
+}
+::-webkit-scrollbar-thumb {
+  background: #262a33;
+  border-radius: 4px;
 }
