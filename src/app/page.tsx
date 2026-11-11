@@ -145,6 +145,9 @@ const handleDownloadCv = () => {
                   <span className="px-2 py-1 rounded-md bg-surface-container text-on-surface-variant font-code-inline text-[11px]">CI/CD</span>
                   <span className="px-2 py-1 rounded-md bg-surface-container text-on-surface-variant font-code-inline text-[11px]">Tests E2E &amp; Unitaires</span>
                   <span className="px-2 py-1 rounded-md bg-surface-container text-on-surface-variant font-code-inline text-[11px]">Node.js</span>
+                  <span className="px-2 py-1 rounded-md bg-surface-container text-on-surface-variant font-code-inline text-[11px]">React</span>
+                  <span className="px-2 py-1 rounded-md bg-surface-container text-on-surface-variant font-code-inline text-[11px]">Express</span>
+                  <span className="px-2 py-1 rounded-md bg-surface-container text-on-surface-variant font-code-inline text-[11px]">Socket.IO</span>
                 </div>
               </div>
 
